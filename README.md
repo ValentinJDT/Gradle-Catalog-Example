@@ -5,7 +5,7 @@
 
 Le project `catalog` est un projet gradle de définition de dépendances.
 Il contient trois principaux plugins :
- - base : ajoute le minimum des fonctionnalités pour un projet gradle.
+ - `base` : ajoute le minimum des fonctionnalités pour un projet gradle.
  - `version-catalog` : permet de définir un catalogue de versions de dépendances.
  - `maven-publish` : permet de publier les artefacts du projet dans un dépôt maven.
 
