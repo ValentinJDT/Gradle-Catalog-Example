@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "fr.valentinjdt"
-version = property("version")!!
+version = property("version") as String
 
 catalog {
     versionCatalog {

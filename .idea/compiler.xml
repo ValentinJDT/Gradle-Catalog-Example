@@ -2,10 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="ChildProject.main" target="21" />
-      <module name="ChildProject.test" target="21" />
-      <module name="ParentProject.main" target="21" />
-      <module name="ParentProject.test" target="21" />
+      <module name="main-project.main" target="21" />
+      <module name="main-project.test" target="21" />
+      <module name="catalog.main" target="21" />
+      <module name="catalog.test" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
