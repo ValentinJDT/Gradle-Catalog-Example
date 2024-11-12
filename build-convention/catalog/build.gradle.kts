@@ -9,6 +9,7 @@ group = property("group") as String
 
 catalog {
     versionCatalog {
+        // Json dependency :
         val json = version("json", property("json-version") as String)
         library("serialization-json", "org.json", "json").versionRef(json)
     }
