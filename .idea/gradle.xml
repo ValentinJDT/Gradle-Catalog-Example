@@ -4,11 +4,13 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/catalog" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/build-convention" />
         <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/catalog" />
+            <option value="$PROJECT_DIR$/build-convention" />
+            <option value="$PROJECT_DIR$/build-convention/catalog" />
+            <option value="$PROJECT_DIR$/build-convention/plugins" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,18 +1,15 @@
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
-}
 
-dependencyResolutionManagement {
+pluginManagement {
     repositories {
         mavenLocal()
-        mavenCentral()
-    }
-
-    versionCatalogs {
-        create("libs") {
-            from("fr.valentinjdt:catalog:${providers.gradleProperty("catalog-version").get()}")
-        }
+        gradlePluginPortal()
     }
 }
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+    id("fr.valentinjdt.plugins") version "1.0-SNAPSHOT"
+}
+
 
 rootProject.name = "main-project"
