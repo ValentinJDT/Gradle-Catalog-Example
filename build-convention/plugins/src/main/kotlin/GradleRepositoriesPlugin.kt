@@ -22,7 +22,7 @@ class GradleRepositoriesPlugin:  Plugin<PluginAware> {
                 repositories.defineRepositories()
             }
             is Settings -> {
-                val productVersion = extra.properties["plugin-version"] as? String ?: throw MissingPropertyException("Product version not defined.")
+                val productVersion = extra.properties["plugin-version"] as? String ?: throw MissingPropertyException("Product version not defined in your gradle.properties. Please use the same version as the plugin.")
                 dependencyResolutionManagement.repositories.defineRepositories()
                 dependencyResolutionManagement.versionCatalogs.create("libs") {
                     from("fr.valentinjdt:catalog:${productVersion}")
