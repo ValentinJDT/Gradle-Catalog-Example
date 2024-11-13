@@ -10,7 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$/build-convention" />
             <option value="$PROJECT_DIR$/build-convention/catalog" />
-            <option value="$PROJECT_DIR$/build-convention/plugins" />
+            <option value="$PROJECT_DIR$/build-convention/plugin" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -5,4 +5,4 @@ plugins {
 rootProject.name = "build-convention"
 
 include(":catalog")
-include(":plugins")
+include(":plugin")

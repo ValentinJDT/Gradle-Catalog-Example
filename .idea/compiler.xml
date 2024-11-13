@@ -4,7 +4,10 @@
     <bytecodeTargetLevel>
       <module name="build-convention.catalog.main" target="21" />
       <module name="build-convention.catalog.test" target="21" />
+      <module name="build-convention.generate.main" target="21" />
       <module name="build-convention.main" target="21" />
+      <module name="build-convention.plugins.main" target="21" />
+      <module name="build-convention.plugins.test" target="21" />
       <module name="build-convention.test" target="21" />
       <module name="catalog.main" target="21" />
       <module name="catalog.test" target="21" />

@@ -8,7 +8,7 @@ group = "fr.valentinjdt"
 version = "1.0-SNAPSHOT"
 
 dependencies {
-    println("Json dependency version : " + libs.serialization.json.get().version)
+    println("Json dependency version : ${libs.serialization.json.get().version}")
     implementation(libs.serialization.json)
 
     testImplementation(kotlin("test"))
