@@ -24,21 +24,28 @@ open class GenerateClassTask : DefaultTask() {
     @TaskAction
     fun generate() {
         val group = project.property("group") as String
-        val mainPackage = "$group.plugin"
 
-        val outputDir = File(project.buildDir, "generated/sources/kotlin/main")
+        val outputDir = project.layout.buildDirectory.asFile.get().resolve("generated/sources/kotlin/main")
         val outputFile = File(outputDir, "GeneratedProperties.kt")
 
         outputDir.mkdirs()
-        outputFile.writeText(
-            """
-            package $mainPackage
-
-            const val VERSION: String = "${project.version}"
-            const val GROUP: String = "$group"
-            """.trimIndent()
-        )
+        outputFile.writeText("package $group.plugin\n\n")
+        outputFile.addConstant("version", project.version.toString(), "Version of the plugin.")
+        outputFile.addConstant("group", group, "Group of the plugin.")
     }
+
+    inline fun <reified T: Comparable<*>> File.addConstant(name: String, value: T, description: String? = null) {
+        if(description != null && description.isNotBlank()) {
+            appendText("/** $description */\n")
+        }
+
+        if(value is Number) {
+            appendText("const val ${name.uppercase()} = $value\n\n")
+        } else {
+            appendText("const val ${name.uppercase()} = \"$value\"\n\n")
+        }
+    }
+
 }
 
 tasks.register<GenerateClassTask>("generateClass")
