@@ -23,18 +23,10 @@ class GradleRepositoriesPlugin: Plugin<PluginAware> {
             is Settings -> {
                 dependencyResolutionManagement.repositories.defineRepositories()
                 dependencyResolutionManagement.versionCatalogs.create("libs") {
-                    from("${getValue("GROUP")}:catalog:${getValue("VERSION")}")
+                    from("${GROUP}:catalog:${VERSION}")
                 }
             }
         }
-    }
-
-    /** Work-around : avoid auto-completion error and getting value with reflection. */
-    private fun getValue(key: String): String {
-        val clazz = Class.forName("${this::class.java.`package`.name}.GeneratedPropertiesKt")
-        val field = clazz.getDeclaredField(key)
-        field.isAccessible = true
-        return field.get(null) as String
     }
 }
 
